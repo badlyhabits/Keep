@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+  form(method="post", id="new-note")
+    div
+      input(type="text", name="title", placeholder="Note Title...", required="required")
+    div
+      textarea(name="content", placeholder="Note Content", required="required")
+    div
+      button(type="submit") Save
+
+
+  #notes
+    - each note in notes
+      div
+        div.note
+          div.note-title= note.title
+          div.note-content= note.content
+          div.note-created= note.created
+
+          div.note-actions
+            form(method="post", action="/note/:id/update")
+              input(name="_id", type="hidden", value=note._id.toHexString())
+              button(type="submit").note-update ✎
+
+            form(method="post", action="/note/:id/delete")
+              input(name="_id", type="hidden", value=note._id.toHexString())
+              button(type="submit").note-delete ×
+

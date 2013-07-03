@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  form(method="post", id="new-note")
+    input(name="_id", type="hidden", value= note._id.toHexString())
+    div
+      input(type="text", name="title", placeholder="Note Title...", required="required", value= note.title)
+    div
+      textarea(name="content", placeholder="Note Content", required="required", value= note.content)
+    div
+      button(type="submit") Update

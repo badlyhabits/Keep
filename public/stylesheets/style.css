@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  color: #666;
+  background: #f1f1f1;
+  font: 400 15px arial, sans-serif;
+}
+h1 {
+  margin: 0;
+  color: #444;
+  font-size: 54px;
+  font-weight: 400;
+  text-align: center;
+}
+input,
+textarea {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #cbcbcb;
+  font: 400 15px arial, sans-serif;
+}
+#new-note {
+  text-align: center;
+  margin: 20px 0;
+}
+#new-note input[type=text] {
+  width: 540px;
+}
+#new-note textarea {
+  width: 540px;
+  min-height: 60px;
+  resize: vertical;
+}
+#new-note button[type=submit] {
+  width: 540px;
+  padding: 6px 4px;
+}
+#notes {
+  text-align: center;
+}
+.note {
+  position: relative;
+  width: 540px;
+  margin: 10px 0;
+  padding: 0 10px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #cbcbcb;
+}
+.note-title,
+.note-content,
+.note-created {
+  text-align: left;
+}
+.note-title {
+  margin: 10px 0;
+  color: #444;
+  font-size: 17px;
+  font-weight: 700;
+}
+.note-content {
+  margin: 0 0 10px;
+}
+.note-created {
+  padding: 5px 0;
+  border-top: 1px dashed #cbcbcb;
+}
+.note-actions {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  left: auto;
+}
+.note-actions form {
+  display: inline-block;
+}
+.note-actions button {
+  margin: 0;
+  padding: 0;
+}
+.note-update,
+.note-delete {
+  font-size: 36px;
+  line-height: 1;
+}
